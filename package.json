@@ -19,5 +19,8 @@
   "homepage": "https://github.com/waterlow/node_canvas_sandbox#readme",
   "devDependencies": {
     "@vercel/node": "^2.1.0"
+  },
+  "dependencies": {
+    "canvas": "^2.9.3"
   }
 }
