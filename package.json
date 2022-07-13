@@ -1,0 +1,23 @@
+{
+  "name": "node_canvas_sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/waterlow/node_canvas_sandbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waterlow/node_canvas_sandbox/issues"
+  },
+  "homepage": "https://github.com/waterlow/node_canvas_sandbox#readme",
+  "devDependencies": {
+    "@vercel/node": "^2.1.0"
+  }
+}
