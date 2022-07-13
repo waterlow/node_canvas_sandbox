@@ -1,8 +1,10 @@
+import path from 'path';
 import { createCanvas, registerFont } from 'canvas';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 export default function (req: VercelRequest, res: VercelResponse) {
-  registerFont('./api/NotoSansJP-Bold.otf', { family: 'NotoSansJP' });
+  const filePath = path.join(process.cwd(), '/api/NotoSansJP-Bold.otf');
+  registerFont(filePath, { family: 'NotoSansJP' });
   const width = 600;
   const height = 381;
 
