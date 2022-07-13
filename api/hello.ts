@@ -3,6 +3,7 @@ import { createCanvas, registerFont } from 'canvas';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 export default function (req: VercelRequest, res: VercelResponse) {
+  const { name = '宮本哲', company = '住三商事株式会社', email = 'miyamoto@example.com' } = req.query;
   const filePath = path.join(process.cwd(), '/api/NotoSansJP-Bold.otf');
   registerFont(filePath, { family: 'NotoSansJP' });
   const width = 600;
@@ -14,10 +15,14 @@ export default function (req: VercelRequest, res: VercelResponse) {
   context.fillStyle = "#764abc";
   context.fillRect(0, 0, width, height);
 
-  context.font = "bold 40pt 'NotoSansJP'";
   context.textAlign = "center";
   context.fillStyle = "#fff";
-  context.fillText('宮本哲', 300, 200);
+  context.font = "bold 20pt 'NotoSansJP'";
+  context.fillText(Array.isArray(company) ? company[0] : company, 300, 120);
+  context.font = "bold 40pt 'NotoSansJP'";
+  context.fillText(Array.isArray(name) ? name[0] : name, 300, 200);
+  context.font = "bold 20pt 'NotoSansJP'";
+  context.fillText(Array.isArray(email) ? email[0] : email, 300, 270);
 
   res.setHeader('Content-Type', 'image/jpeg');
   const buffer = canvas.toBuffer("image/png");
