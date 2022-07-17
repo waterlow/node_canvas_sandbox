@@ -15,16 +15,13 @@ export default function (req: VercelRequest, res: VercelResponse) {
   context.fillStyle = "#764abc";
   context.fillRect(0, 0, width, height);
 
-  context.textAlign = "end";
   context.fillStyle = "#fff";
   context.font = "bold 20pt 'NotoSansJP'";
-  context.fillText(Array.isArray(company) ? company[0] : company, 580, 120);
+  context.fillText(Array.isArray(company) ? company[0] : company, 20, 120);
   context.font = "bold 40pt 'NotoSansJP'";
-  context.fillText(Array.isArray(name) ? name[0] : name, 580, 200);
+  context.fillText(Array.isArray(name) ? name[0] : name, 20, 200);
   context.font = "bold 20pt 'NotoSansJP'";
-  context.fillText(Array.isArray(email) ? email[0] : email, 580, 270);
-
-  console.log(process.env);
+  context.fillText(Array.isArray(email) ? email[0] : email, 20, 270);
 
   res.setHeader('Content-Type', 'image/jpeg');
   const buffer = canvas.toBuffer("image/png");
