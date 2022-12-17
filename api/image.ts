@@ -12,7 +12,7 @@ export default function (req: VercelRequest, res: VercelResponse) {
   const canvas = createCanvas(width, height);
   const context = canvas.getContext("2d");
 
-  context.fillStyle = "#764abc";
+  context.fillStyle = "#008b8b";
   context.fillRect(0, 0, width, height);
 
   context.fillStyle = "#fff";
